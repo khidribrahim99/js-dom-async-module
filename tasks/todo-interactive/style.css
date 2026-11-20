@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 18px;
+  display: grid;
+  place-items: center;
+  background: #f3f5f7;
+  color: #252b33;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-container {
+  width: min(100%, 560px);
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(25, 38, 52, 0.08);
+}
+
+.todo-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #737e89;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #727d88;
+  line-height: 1.5;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+#task-count {
+  margin: 0;
+  color: #737e89;
+  font-size: 0.85rem;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 16px;
+  border: 1px solid #e3e7eb;
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #343b43;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.task:hover {
+  border-color: #aab4bd;
+}
+
+.task:focus-visible {
+  outline: 3px solid rgba(45, 125, 82, 0.25);
+  outline-offset: 2px;
+}
+
+.task-check {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  flex: 0 0 22px;
+  place-items: center;
+  border: 1.5px solid #b8c0c8;
+  border-radius: 50%;
+  color: transparent;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.task.completed {
+  border-color: #b9dfc8;
+  background: #e8f6ed;
+  color: #267346;
+}
+
+.task.completed .task-check {
+  border-color: #2e8b57;
+  background: #2e8b57;
+  color: #ffffff;
+}
+
+.tip {
+  margin: 24px 0 0;
+  color: #7a858f;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 26px 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
